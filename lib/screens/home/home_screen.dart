@@ -41,15 +41,28 @@ class HomeScreen extends StatelessWidget {
                     .headline4!
                     .copyWith(fontWeight: FontWeight.w500, color: Colors.black),
               ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: defaultPadding),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'My points',
+                      style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                          ),
+                    )
+                  ],
+                ),
+              ),
+
               const Text(
-                "best Outfits for you",
+                "10000",
                 style: TextStyle(fontSize: 18),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: defaultPadding),
-                child: SearchForm(),
-              ),
-              const Categories(),
+
+              // const Categories(),
               const NewArrivalProducts(),
               const PopularProducts(),
             ],
