@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:stylish/constants.dart';
+import 'package:stylish/screens/home/components/user_profile.dart';
 import 'components/categories.dart';
 import 'components/new_arrival_products.dart';
 import 'components/popular_products.dart';
@@ -42,23 +43,13 @@ class Test extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "WHYYYYY",
+                "Profile",
                 style: Theme.of(context)
                     .textTheme
                     .headline4!
                     .copyWith(fontWeight: FontWeight.w500, color: Colors.black),
               ),
-              const Text(
-                "best Outfits for you",
-                style: TextStyle(fontSize: 18),
-              ),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: defaultPadding),
-                child: SearchForm(),
-              ),
-              const Categories(),
-              const NewArrivalProducts(),
-              const PopularProducts(),
+              const ProfilePage()
             ],
           ),
         ));
